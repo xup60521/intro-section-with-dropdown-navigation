@@ -12,8 +12,6 @@ const page = document.getElementById("page");
 const mobileNavFeaturesAccordian = document.getElementById("mobile-nav-features-accordion")
 const mobileNavCompanyAccordian = document.getElementById("mobile-nav-company-accordion")
 
-openMobileNavMenu()
-
 
 desktopFeaturesDropdown?.addEventListener("click", (e) => {
     e.stopPropagation();
