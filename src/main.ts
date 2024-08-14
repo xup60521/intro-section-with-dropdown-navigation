@@ -129,7 +129,7 @@ function openDesktopCompanyDropdown() {
     const arrowImg = document.querySelector("#desktop-company-btn > img") as HTMLImageElement
     if (!desktopCompanyDropdown || !arrowImg) return;
     desktopCompanyDropdown.style.display = "flex";
-    arrowImg.src = "/images/icon-arrow-down.svg"
+    arrowImg.src = ArrowDownImg
     gsap.fromTo(
         desktopCompanyDropdown,
         { opacity: 0, y: -25 },
@@ -140,7 +140,7 @@ function openDesktopCompanyDropdown() {
 function closeDesktopCompanyDropdown() {
     const arrowImg = document.querySelector("#desktop-company-btn > img") as HTMLImageElement
     if (!desktopCompanyDropdown || !arrowImg) return;
-    arrowImg.src = "/images/icon-arrow-up.svg"
+    arrowImg.src = ArrowUpImg
     gsap.to(desktopCompanyDropdown, {
         opacity: 0,
         y: -25,
