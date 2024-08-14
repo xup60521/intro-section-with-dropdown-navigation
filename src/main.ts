@@ -1,4 +1,6 @@
 import gsap from "gsap";
+import ArrowUpImg from "/images/icon-arrow-up.svg"
+import ArrowDownImg from "/images/icon-arrow-down.svg"
 
 const desktopFeaturesDropdown = document.getElementById(
     "desktop-features-dropdown"
@@ -94,7 +96,7 @@ function openDesktopFeaturesDropdown() {
     const arrowImg = document.querySelector("#desktop-features-btn > img") as HTMLImageElement
     if (!desktopFeaturesDropdown || !arrowImg) return;
     desktopFeaturesDropdown.style.display = "flex";
-    arrowImg.src = "/images/icon-arrow-down.svg"
+    arrowImg.src = ArrowDownImg
     gsap.fromTo(
         desktopFeaturesDropdown,
         { opacity: 0, y: -25 },
@@ -105,7 +107,7 @@ function openDesktopFeaturesDropdown() {
 function closeDesktopFeaturesDropdown() {
     const arrowImg = document.querySelector("#desktop-features-btn > img") as HTMLImageElement
     if (!desktopFeaturesDropdown || !arrowImg) return;
-    arrowImg.src = "/images/icon-arrow-up.svg"
+    arrowImg.src = ArrowUpImg
     gsap.to(desktopFeaturesDropdown, {
         opacity: 0,
         y: -25,
