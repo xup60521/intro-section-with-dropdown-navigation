@@ -10,11 +10,53 @@
 </head>
 
 <body>
-    <main
-        class="w-full min-h-screen bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
-        <h1 class="font-mono font-bold text-3xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            Vite + Typescript + TailwindCSS + GitHub Pages
-        </h1>
+    <main>
+        <div class="min-h-screen bg-c_Almost_White flex flex-col pb-12">
+            <nav class="flex items-center px-8 py-6 gap-12">
+                <img src="/images/logo.svg" alt="logo" class="aspect-auto h-8">
+                <div class="lg:flex hidden items-center gap-8">
+                    <button
+                        class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Feature
+                        <img src="/images/icon-arrow-up.svg" alt="feature up arrow"></button>
+                    <button
+                        class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Category
+                        <img src="/images/icon-arrow-up.svg" alt="category up arrow"></button>
+                    <button
+                        class=" font-epilogue text-sm text-c_Medium_Gray transition hover:text-blac font-mediumk">Careers</button>
+                    <button
+                        class=" font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">About</button>
+                </div>
+                <div class="flex-grow p-1">
+
+                </div>
+                <div class="lg:flex hidden items-center gap-10">
+                    <button
+                        class="font-epilogue transition text-c_Medium_Gray hover:text-black font-medium text-sm">Login</button>
+                    <button
+                        class="font-epilogue transition text-c_Medium_Gray hover:text-black py-2 px-5 rounded-xl border-2 border-c_Medium_Gray hover:border-black font-medium text-sm">Register</button>
+                </div>
+                <img src="/images/icon-menu.svg" alt="menu button" class="aspect-auto h-6 lg:hidden" role="button" />
+            </nav>
+            <div class="flex justify-center gap-[10vw] py-8">
+                <div class=" max-w-[28rem] flex flex-col">
+                    <div class="flex flex-col flex-grow justify-center">
+                        <h1 class="text-[4.25rem] leading-[4.25rem] font-bold font-epilogue">Make remote work</h1>
+                        <p class="font-epilogue lg:max-w-[25rem] pt-10 pb-12">Get your team in sync, no matter your location.
+                            Streamline processes. create team rituals, and watch productivity soar.</p>
+                        <button
+                            class="font-epilogue w-fit transition text-c_Medium_Gray hover:text-black py-2 px-5 rounded-xl border-[1.5px] border-c_Medium_Gray hover:border-black font-medium">Learn
+                            more</button>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <img src="/images/client-databiz.svg" alt="client-databiz" class="aspect-auto h-4" />
+                        <img src="/images/client-audiophile.svg" alt="client-audiophile" class="aspect-auto h-7" />
+                        <img src="/images/client-meet.svg" alt="client-meet" class="aspect-auto h-4" />
+                        <img src="/images/client-maker.svg" alt="client-maker" class="aspect-auto h-6" />
+                    </div>
+                </div>
+                <img src="/images/image-hero-desktop.png" alt="desktop hero image" class="aspect-[960/1280] w-[30vw]" />
+            </div>
+        </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
 </body>
