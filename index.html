@@ -11,18 +11,63 @@
 
 <body>
     <main>
-        <div class="min-h-screen bg-c_Almost_White flex flex-col pb-12">
-            <nav class="flex items-center px-8 py-6 gap-12">
+        <nav style="display: none;" id="mobile-nav-menu"
+            class="lg:hidden gap-3 px-6 z-10 fixed flex flex-col w-[66.7vw] top-0 right-0 h-screen bg-white">
+            <div class="flex justify-end py-6">
+                <img src="/images/icon-close-menu.svg" alt="close nav menu" role="button" id="close-mobile-nav-btn" />
+            </div>
+            <div style="height: 1.5rem;" class="overflow-hidden w-full relative transition flex flex-col gap-3"
+                id="mobile-nav-features-accordion">
+                <button id="mobile-nav-features-btn"
+                    class="font-epilogue text-c_Medium_Gray w-fit flex items-center gap-1">Features <img
+                        src="/images/icon-arrow-down.svg" alt="mobile nav features arrow down" /></button>
+                <div class="px-6 flex flex-col">
+                    <button
+                        class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
+                            src="/images/icon-todo.svg" alt="todo icon" />Todo List</button>
+                    <button
+                        class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
+                            src="/images/icon-calendar.svg" alt="calendar icon" />Calendar</button>
+                    <button
+                        class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
+                            src="/images/icon-reminders.svg" alt="reminders icon" />Reminders</button>
+                    <button
+                        class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
+                            src="/images/icon-planning.svg" alt="planning icon" />Planning</button>
+                </div>
+            </div>
+            <div style="height: 1.5rem;" class="overflow-hidden w-full relative transition flex flex-col gap-3"
+                id="mobile-nav-company-accordion">
+                <button id="mobile-nav-company-btn"
+                    class="font-epilogue text-c_Medium_Gray w-fit flex items-center gap-1">Company <img
+                        src="/images/icon-arrow-down.svg" alt="mobile nav company arrow down" /></button>
+                <div class="px-6 flex flex-col">
+                    <button
+                        class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">History</button>
+                    <button
+                        class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">Our
+                        Team</button>
+                    <button
+                        class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">Blog</button>
+                </div>
+            </div>
+            <button class="font-epilogue text-c_Medium_Gray w-fit flex items-center gap-1">Careers</button>
+            <button class="font-epilogue text-c_Medium_Gray w-fit flex items-center gap-1">About</button>
+            <div class="flex flex-col w-full gap-4">
+                <button class="font-epilogue text-c_Medium_Gray w-full text-center gap-1">Login</button>
+                <button
+                    class="font-epilogue transition text-c_Medium_Gray hover:text-black py-2 px-5 rounded-xl border-2 border-c_Medium_Gray hover:border-black font-medium text-sm">Register</button>
+            </div>
+        </nav>
+        <div id="page" class="min-h-screen transition bg-c_Almost_White flex flex-col pb-12">
+            <nav class="flex items-center lg:px-8 px-4 lg:py-6 pt-6 gap-12">
                 <img src="/images/logo.svg" alt="logo" class="aspect-auto h-7">
                 <div class="lg:flex hidden items-center gap-8">
                     <div class="lg:block hidden relative">
-                        <button
-                            id="desktop-features-btn"
-                            class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Feature
+                        <button id="desktop-features-btn"
+                            class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Features
                             <img src="/images/icon-arrow-up.svg" alt="feature up arrow"></button>
-                        <div
-                            id="desktop-features-dropdown"
-                            style="display: none;"
+                        <div id="desktop-features-dropdown" style="display: none;"
                             class="absolute right-0 top-8 lg:flex hidden flex-col bg-white rounded-lg p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-[7.5rem]">
                             <button
                                 class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
@@ -39,19 +84,17 @@
                         </div>
                     </div>
                     <div class="lg:block hidden relative">
-                        <button
-                            id="desktop-company-btn"
+                        <button id="desktop-company-btn"
                             class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Company
                             <img src="/images/icon-arrow-up.svg" alt="category up arrow"></button>
-                        <div
-                            id="desktop-company-dropdown"
-                            style="display: none;"
+                        <div id="desktop-company-dropdown" style="display: none;"
                             class="absolute right-0 translate-x-4 top-8 lg:flex hidden flex-col bg-white rounded-lg p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-24">
                             <button
                                 class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">History</button>
                             <button
-                                class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">Our Team</button>
-                                <button
+                                class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">Our
+                                Team</button>
+                            <button
                                 class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">Blog</button>
                         </div>
                     </div>
@@ -69,27 +112,34 @@
                     <button
                         class="font-epilogue transition text-c_Medium_Gray hover:text-black py-2 px-5 rounded-xl border-2 border-c_Medium_Gray hover:border-black font-medium text-sm">Register</button>
                 </div>
-                <img src="/images/icon-menu.svg" alt="menu button" class="aspect-auto h-6 lg:hidden" role="button" />
+                <img src="/images/icon-menu.svg" alt="menu button" class="aspect-auto h-6 lg:hidden" role="button"
+                    id="mobile-menu-btn" />
             </nav>
-            <div class="flex justify-center gap-[10vw] py-12">
-                <div class=" max-w-[28rem] flex flex-col">
-                    <div class="flex flex-col flex-grow justify-center">
-                        <h1 class="text-[4.25rem] leading-[4.25rem] font-bold font-epilogue">Make remote work</h1>
-                        <p class="font-epilogue lg:max-w-[25rem] pt-10 pb-12">Get your team in sync, no matter your
+            <div class="flex lg:flex-row flex-col-reverse justify-center gap-[10vw] py-12">
+                <div class=" lg:max-w-[28rem] flex flex-col">
+                    <div class="flex flex-col flex-grow justify-center lg:items-start items-center">
+                        <h1
+                            class="lg:text-[4.25rem] lg:leading-[4.25rem] lg:text-left text-center text-[2.25rem] font-bold font-epilogue">
+                            Make remote work</h1>
+                        <p
+                            class="font-epilogue lg:max-w-[25rem] lg:pt-10 lg:pb-12 lg:text-left text-center lg:px-0 px-4 pt-4 pb-6">
+                            Get your team in sync, no matter your
                             location.
                             Streamline processes. create team rituals, and watch productivity soar.</p>
                         <button
-                            class="font-epilogue w-fit transition text-c_Medium_Gray hover:text-black py-2 px-5 rounded-xl border-[1.5px] border-c_Medium_Gray hover:border-black font-medium">Learn
+                            class="font-epilogue w-fit transition lg:text-c_Medium_Gray lg:hover:text-black py-[0.6rem] px-5 rounded-xl lg:border-[1.5px] lg:border-c_Medium_Gray lg:hover:border-black font-medium bg-black text-white">Learn
                             more</button>
                     </div>
-                    <div class="flex items-center gap-8">
-                        <img src="/images/client-databiz.svg" alt="client-databiz" class="aspect-auto h-4" />
-                        <img src="/images/client-audiophile.svg" alt="client-audiophile" class="aspect-auto h-7" />
-                        <img src="/images/client-meet.svg" alt="client-meet" class="aspect-auto h-4" />
-                        <img src="/images/client-maker.svg" alt="client-maker" class="aspect-auto h-6" />
+                    <div class="lg:flex items-center lg:gap-8 grid grid-cols-4 gap-6 px-4 lg:py-0 py-12">
+                        <img src="/images/client-databiz.svg" alt="client-databiz" class="aspect-auto lg:h-4" />
+                        <img src="/images/client-audiophile.svg" alt="client-audiophile" class="aspect-auto lg:h-7" />
+                        <img src="/images/client-meet.svg" alt="client-meet" class="aspect-auto lg:h-4" />
+                        <img src="/images/client-maker.svg" alt="client-maker" class="aspect-auto lg:h-6" />
                     </div>
                 </div>
-                <img src="/images/image-hero-desktop.png" alt="desktop hero image" class="aspect-[960/1280] w-[30vw]" />
+                <img src="/images/image-hero-desktop.png" alt="desktop hero image"
+                    class="aspect-[960/1280] w-[30vw] lg:block hidden" />
+                <img src="/images/image-hero-mobile.png" alt="mobile hero image" class="lg:hidden" />
             </div>
         </div>
     </main>

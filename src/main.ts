@@ -6,52 +6,97 @@ const desktopFeaturesDropdown = document.getElementById(
 const desktopCompanyDropdown = document.getElementById(
     "desktop-company-dropdown"
 );
+const mobileNavMenu = document.getElementById("mobile-nav-menu");
+const page = document.getElementById("page");
+
+const mobileNavFeaturesAccordian = document.getElementById("mobile-nav-features-accordion")
+const mobileNavCompanyAccordian = document.getElementById("mobile-nav-company-accordion")
+
+openMobileNavMenu()
+
 
 desktopFeaturesDropdown?.addEventListener("click", (e) => {
-    e.stopPropagation()
-})
+    e.stopPropagation();
+});
 desktopCompanyDropdown?.addEventListener("click", (e) => {
-    e.stopPropagation()
-})
+    e.stopPropagation();
+});
+mobileNavMenu?.addEventListener("click", (e) => e.stopPropagation());
 
 document
     .getElementById("desktop-features-btn")
     ?.addEventListener("click", (e) => {
         if (!desktopFeaturesDropdown) return;
         e.stopPropagation();
-        closeDesktopCompanyDropdown()
+        closeDesktopCompanyDropdown();
         if (
             desktopFeaturesDropdown.style.display === "none" ||
             desktopFeaturesDropdown.style.display === ""
         ) {
-            openDesktopFeaturesDropdown()
+            openDesktopFeaturesDropdown();
         } else {
-            closeDesktopFeaturesDropdown()
+            closeDesktopFeaturesDropdown();
         }
     });
 
-document.getElementById("desktop-company-btn")?.addEventListener("click", e => {
-    if (!desktopCompanyDropdown) return;
-    e.stopPropagation()
-    closeDesktopFeaturesDropdown()
-    if (
-        desktopCompanyDropdown.style.display === "none" ||
-        desktopCompanyDropdown.style.display === ""
-    ) {
-        openDesktopCompanyDropdown()
-    } else {
-        closeDesktopCompanyDropdown()
-    }
+document
+    .getElementById("desktop-company-btn")
+    ?.addEventListener("click", (e) => {
+        if (!desktopCompanyDropdown) return;
+        e.stopPropagation();
+        closeDesktopFeaturesDropdown();
+        if (
+            desktopCompanyDropdown.style.display === "none" ||
+            desktopCompanyDropdown.style.display === ""
+        ) {
+            openDesktopCompanyDropdown();
+        } else {
+            closeDesktopCompanyDropdown();
+        }
+    });
+
+document.getElementById("mobile-menu-btn")?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!mobileNavMenu ) return;
+    openMobileNavMenu();
 });
 
-window.addEventListener("click", () => {
-    closeDesktopFeaturesDropdown()
-    closeDesktopCompanyDropdown()
+document.getElementById("close-mobile-nav-btn")?.addEventListener("click", () => {
+    closeMobileNavMenu()
 })
 
+
+document.getElementById("mobile-nav-features-btn")?.addEventListener("click", () => {
+    if (!mobileNavFeaturesAccordian) return;
+    if (mobileNavFeaturesAccordian.style.height === "1.5rem") {
+        gsap.to(mobileNavFeaturesAccordian, {height: "auto", duration: 0.5, ease: "power2.out"})
+    } else {
+        gsap.to(mobileNavFeaturesAccordian, {height: "1.5rem", duration: 0.5, ease: "power2.out"})
+
+    }
+})
+
+document.getElementById("mobile-nav-company-btn")?.addEventListener("click", () => {
+    if (!mobileNavCompanyAccordian) return;
+    if (mobileNavCompanyAccordian.style.height === "1.5rem") {
+        gsap.to(mobileNavCompanyAccordian, {height: "auto", duration: 0.5, ease: "power2.out"})
+    } else {
+        gsap.to(mobileNavCompanyAccordian, {height: "1.5rem", duration: 0.5, ease: "power2.out"})
+
+    }
+})
+
+window.addEventListener("click", () => {
+    closeDesktopFeaturesDropdown();
+    closeDesktopCompanyDropdown();
+    closeMobileNavMenu()
+});
+
 function openDesktopFeaturesDropdown() {
-    if (!desktopFeaturesDropdown) return;
+    const arrowImg = document.querySelector("#desktop-features-btn > img") as HTMLImageElement
+    if (!desktopFeaturesDropdown || !arrowImg) return;
     desktopFeaturesDropdown.style.display = "flex";
+    arrowImg.src = "/images/icon-arrow-down.svg"
     gsap.fromTo(
         desktopFeaturesDropdown,
         { opacity: 0, y: -25 },
@@ -60,7 +105,9 @@ function openDesktopFeaturesDropdown() {
 }
 
 function closeDesktopFeaturesDropdown() {
-    if (!desktopFeaturesDropdown) return;
+    const arrowImg = document.querySelector("#desktop-features-btn > img") as HTMLImageElement
+    if (!desktopFeaturesDropdown || !arrowImg) return;
+    arrowImg.src = "/images/icon-arrow-up.svg"
     gsap.to(desktopFeaturesDropdown, {
         opacity: 0,
         y: -25,
@@ -73,8 +120,10 @@ function closeDesktopFeaturesDropdown() {
 }
 
 function openDesktopCompanyDropdown() {
-    if (!desktopCompanyDropdown) return;
+    const arrowImg = document.querySelector("#desktop-company-btn > img") as HTMLImageElement
+    if (!desktopCompanyDropdown || !arrowImg) return;
     desktopCompanyDropdown.style.display = "flex";
+    arrowImg.src = "/images/icon-arrow-down.svg"
     gsap.fromTo(
         desktopCompanyDropdown,
         { opacity: 0, y: -25 },
@@ -83,7 +132,9 @@ function openDesktopCompanyDropdown() {
 }
 
 function closeDesktopCompanyDropdown() {
-    if (!desktopCompanyDropdown) return;
+    const arrowImg = document.querySelector("#desktop-company-btn > img") as HTMLImageElement
+    if (!desktopCompanyDropdown || !arrowImg) return;
+    arrowImg.src = "/images/icon-arrow-up.svg"
     gsap.to(desktopCompanyDropdown, {
         opacity: 0,
         y: -25,
@@ -93,4 +144,16 @@ function closeDesktopCompanyDropdown() {
             desktopCompanyDropdown.style.display = "none";
         },
     });
+}
+
+function openMobileNavMenu() {
+    if (!mobileNavMenu || !page) return;
+    mobileNavMenu.style.display = "flex";
+    page.style.filter = "brightness(.5)";
+    gsap.fromTo(mobileNavMenu, { x: "100%" }, { x: 0, duration: 0.25 });
+}
+function closeMobileNavMenu() {
+    if (!mobileNavMenu || !page) return;
+    page.style.filter = "brightness(1)";
+    gsap.to(mobileNavMenu, { x: "100%", duration: 0.25 });
 }
