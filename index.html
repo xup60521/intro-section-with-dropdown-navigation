@@ -13,14 +13,48 @@
     <main>
         <div class="min-h-screen bg-c_Almost_White flex flex-col pb-12">
             <nav class="flex items-center px-8 py-6 gap-12">
-                <img src="/images/logo.svg" alt="logo" class="aspect-auto h-8">
+                <img src="/images/logo.svg" alt="logo" class="aspect-auto h-7">
                 <div class="lg:flex hidden items-center gap-8">
-                    <button
-                        class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Feature
-                        <img src="/images/icon-arrow-up.svg" alt="feature up arrow"></button>
-                    <button
-                        class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Category
-                        <img src="/images/icon-arrow-up.svg" alt="category up arrow"></button>
+                    <div class="lg:block hidden relative">
+                        <button
+                            id="desktop-features-btn"
+                            class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Feature
+                            <img src="/images/icon-arrow-up.svg" alt="feature up arrow"></button>
+                        <div
+                            id="desktop-features-dropdown"
+                            style="display: none;"
+                            class="absolute right-0 top-8 lg:flex hidden flex-col bg-white rounded-lg p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-[7.5rem]">
+                            <button
+                                class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
+                                    src="/images/icon-todo.svg" alt="todo icon" />Todo List</button>
+                            <button
+                                class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
+                                    src="/images/icon-calendar.svg" alt="calendar icon" />Calendar</button>
+                            <button
+                                class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
+                                    src="/images/icon-reminders.svg" alt="reminders icon" />Reminders</button>
+                            <button
+                                class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
+                                    src="/images/icon-planning.svg" alt="planning icon" />Planning</button>
+                        </div>
+                    </div>
+                    <div class="lg:block hidden relative">
+                        <button
+                            id="desktop-company-btn"
+                            class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Company
+                            <img src="/images/icon-arrow-up.svg" alt="category up arrow"></button>
+                        <div
+                            id="desktop-company-dropdown"
+                            style="display: none;"
+                            class="absolute right-0 translate-x-4 top-8 lg:flex hidden flex-col bg-white rounded-lg p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-24">
+                            <button
+                                class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">History</button>
+                            <button
+                                class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">Our Team</button>
+                                <button
+                                class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">Blog</button>
+                        </div>
+                    </div>
                     <button
                         class=" font-epilogue text-sm text-c_Medium_Gray transition hover:text-blac font-mediumk">Careers</button>
                     <button
@@ -37,11 +71,12 @@
                 </div>
                 <img src="/images/icon-menu.svg" alt="menu button" class="aspect-auto h-6 lg:hidden" role="button" />
             </nav>
-            <div class="flex justify-center gap-[10vw] py-8">
+            <div class="flex justify-center gap-[10vw] py-12">
                 <div class=" max-w-[28rem] flex flex-col">
                     <div class="flex flex-col flex-grow justify-center">
                         <h1 class="text-[4.25rem] leading-[4.25rem] font-bold font-epilogue">Make remote work</h1>
-                        <p class="font-epilogue lg:max-w-[25rem] pt-10 pb-12">Get your team in sync, no matter your location.
+                        <p class="font-epilogue lg:max-w-[25rem] pt-10 pb-12">Get your team in sync, no matter your
+                            location.
                             Streamline processes. create team rituals, and watch productivity soar.</p>
                         <button
                             class="font-epilogue w-fit transition text-c_Medium_Gray hover:text-black py-2 px-5 rounded-xl border-[1.5px] border-c_Medium_Gray hover:border-black font-medium">Learn
