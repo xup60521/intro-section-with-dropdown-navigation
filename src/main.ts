@@ -67,20 +67,26 @@ document.getElementById("close-mobile-nav-btn")?.addEventListener("click", () =>
 
 
 document.getElementById("mobile-nav-features-btn")?.addEventListener("click", () => {
-    if (!mobileNavFeaturesAccordian) return;
+    const arrowImg = document.querySelector("#mobile-nav-features-btn > img") as HTMLImageElement
+    if (!mobileNavFeaturesAccordian || !arrowImg) return;
     if (mobileNavFeaturesAccordian.style.height === "1.5rem") {
+        arrowImg.src = ArrowUpImg
         gsap.to(mobileNavFeaturesAccordian, {height: "auto", duration: 0.5, ease: "power2.out"})
     } else {
+        arrowImg.src = ArrowDownImg
         gsap.to(mobileNavFeaturesAccordian, {height: "1.5rem", duration: 0.5, ease: "power2.out"})
 
     }
 })
 
 document.getElementById("mobile-nav-company-btn")?.addEventListener("click", () => {
-    if (!mobileNavCompanyAccordian) return;
+    const arrowImg = document.querySelector("#mobile-nav-company-btn > img") as HTMLImageElement
+    if (!mobileNavCompanyAccordian || !arrowImg) return;
     if (mobileNavCompanyAccordian.style.height === "1.5rem") {
+        arrowImg.src = ArrowUpImg
         gsap.to(mobileNavCompanyAccordian, {height: "auto", duration: 0.5, ease: "power2.out"})
     } else {
+        arrowImg.src = ArrowDownImg
         gsap.to(mobileNavCompanyAccordian, {height: "1.5rem", duration: 0.5, ease: "power2.out"})
 
     }
