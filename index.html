@@ -12,7 +12,7 @@
 <body>
     <main>
         <nav style="display: none;" id="mobile-nav-menu"
-            class="lg:hidden gap-3 px-6 z-10 fixed flex flex-col w-[66.7vw] top-0 right-0 h-screen bg-white">
+            class="md:hidden gap-3 px-6 z-10 fixed flex flex-col w-[66.7vw] top-0 right-0 h-screen bg-white">
             <div class="flex justify-end py-6">
                 <img src="/images/icon-close-menu.svg" alt="close nav menu" role="button" id="close-mobile-nav-btn" />
             </div>
@@ -60,15 +60,15 @@
             </div>
         </nav>
         <div id="page" class="min-h-screen transition bg-c_Almost_White flex flex-col pb-12">
-            <nav class="flex items-center lg:px-8 px-4 lg:py-6 pt-6 gap-12">
+            <nav class="flex items-center md:px-8 px-4 md:py-6 pt-6 gap-12">
                 <img src="/images/logo.svg" alt="logo" class="aspect-auto h-7">
-                <div class="lg:flex hidden items-center gap-8">
-                    <div class="lg:block hidden relative">
+                <div class="md:flex hidden items-center gap-8">
+                    <div class="md:block hidden relative">
                         <button id="desktop-features-btn"
                             class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Features
                             <img src="/images/icon-arrow-up.svg" alt="feature up arrow"></button>
                         <div id="desktop-features-dropdown" style="display: none;"
-                            class="absolute right-0 top-8 lg:flex hidden flex-col bg-white rounded-lg p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-[7.5rem]">
+                            class="absolute right-0 top-8 md:flex hidden flex-col bg-white rounded-lg p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-[7.5rem]">
                             <button
                                 class="flex items-center rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs gap-3 font-epilogue text-nowrap"><img
                                     src="/images/icon-todo.svg" alt="todo icon" />Todo List</button>
@@ -83,12 +83,12 @@
                                     src="/images/icon-planning.svg" alt="planning icon" />Planning</button>
                         </div>
                     </div>
-                    <div class="lg:block hidden relative">
+                    <div class="md:block hidden relative">
                         <button id="desktop-company-btn"
                             class="flex items-center gap-1 font-epilogue text-sm text-c_Medium_Gray transition hover:text-black font-medium">Company
                             <img src="/images/icon-arrow-up.svg" alt="category up arrow"></button>
                         <div id="desktop-company-dropdown" style="display: none;"
-                            class="absolute right-0 translate-x-4 top-8 lg:flex hidden flex-col bg-white rounded-lg p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-24">
+                            class="absolute right-0 translate-x-4 top-8 md:flex hidden flex-col bg-white rounded-lg p-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-24">
                             <button
                                 class="rounded-md p-2 transition hover:bg-black hover:bg-opacity-5 text-xs font-epilogue text-nowrap text-left">History</button>
                             <button
@@ -106,40 +106,42 @@
                 <div class="flex-grow p-1">
 
                 </div>
-                <div class="lg:flex hidden items-center gap-10">
+                <div class="md:flex hidden items-center gap-10">
                     <button
                         class="font-epilogue transition text-c_Medium_Gray hover:text-black font-medium text-sm">Login</button>
                     <button
                         class="font-epilogue transition text-c_Medium_Gray hover:text-black py-2 px-5 rounded-xl border-2 border-c_Medium_Gray hover:border-black font-medium text-sm">Register</button>
                 </div>
-                <img src="/images/icon-menu.svg" alt="menu button" class="aspect-auto h-6 lg:hidden" role="button"
+                <img src="/images/icon-menu.svg" alt="menu button" class="aspect-auto h-6 md:hidden" role="button"
                     id="mobile-menu-btn" />
             </nav>
-            <div class="flex lg:flex-row flex-col-reverse justify-center gap-[10vw] py-12">
-                <div class=" lg:max-w-[28rem] flex flex-col">
-                    <div class="flex flex-col flex-grow justify-center lg:items-start items-center">
+            <div class="flex md:flex-row flex-col-reverse justify-center lg:gap-[10vw] md:gap-[2vw] gap-[5vw] py-12">
+                <div class=" md:max-w-[28rem] flex flex-col">
+                    <div class="flex flex-col flex-grow justify-center md:items-start items-center">
                         <h1
-                            class="lg:text-[4.25rem] lg:leading-[4.25rem] lg:text-left text-center text-[2.25rem] font-bold font-epilogue">
+                            class="md:text-[4.25rem] md:leading-[4.25rem] md:text-left text-center text-[2.25rem] font-bold font-epilogue">
                             Make remote work</h1>
                         <p
-                            class="font-epilogue lg:max-w-[25rem] lg:pt-10 lg:pb-12 lg:text-left text-center lg:px-0 px-4 pt-4 pb-6">
+                            class="font-epilogue md:max-w-[25rem] md:pt-10 md:pb-12 md:text-left text-center md:px-0 px-4 pt-4 pb-6">
                             Get your team in sync, no matter your
                             location.
                             Streamline processes. create team rituals, and watch productivity soar.</p>
                         <button
-                            class="font-epilogue w-fit transition lg:text-c_Medium_Gray lg:hover:text-black py-[0.6rem] px-5 rounded-xl lg:border-[1.5px] lg:border-c_Medium_Gray lg:hover:border-black font-medium bg-black lg:bg-transparent text-white">Learn
+                            class="font-epilogue w-fit transition md:text-c_Medium_Gray md:hover:text-black py-[0.6rem] px-5 rounded-xl md:border-[1.5px] md:border-c_Medium_Gray md:hover:border-black font-medium bg-black md:bg-transparent text-white">Learn
                             more</button>
                     </div>
-                    <div class="lg:flex items-center lg:gap-8 grid grid-cols-4 gap-6 px-4 lg:py-0 py-12">
-                        <img src="/images/client-databiz.svg" alt="client-databiz" class="aspect-auto lg:h-4" />
-                        <img src="/images/client-audiophile.svg" alt="client-audiophile" class="aspect-auto lg:h-7" />
-                        <img src="/images/client-meet.svg" alt="client-meet" class="aspect-auto lg:h-4" />
-                        <img src="/images/client-maker.svg" alt="client-maker" class="aspect-auto lg:h-6" />
+                    <div class="md:flex items-center md:gap-8 grid grid-cols-4 gap-6 px-4 md:py-0 py-12">
+                        <img src="/images/client-databiz.svg" alt="client-databiz" class="aspect-auto md:h-4" />
+                        <img src="/images/client-audiophile.svg" alt="client-audiophile" class="aspect-auto md:h-7" />
+                        <img src="/images/client-meet.svg" alt="client-meet" class="aspect-auto md:h-4" />
+                        <img src="/images/client-maker.svg" alt="client-maker" class="aspect-auto md:h-6" />
                     </div>
                 </div>
-                <img src="/images/image-hero-desktop.png" alt="desktop hero image"
-                    class="aspect-[960/1280] w-[30vw] lg:block hidden" />
-                <img src="/images/image-hero-mobile.png" alt="mobile hero image" class="lg:hidden" />
+                <div class="flex items-center">
+                    <img src="/images/image-hero-desktop.png" alt="desktop hero image"
+                        class="aspect-[960/1280] w-[30vw] h-fit md:block hidden" />
+                </div>
+                <img src="/images/image-hero-mobile.png" alt="mobile hero image" class="md:hidden" />
             </div>
         </div>
     </main>
